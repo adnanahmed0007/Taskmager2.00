@@ -12,7 +12,7 @@ const Login = () => {
         try {
             if (password && username) {
                 const response = await axios.post(
-                    "http://localhost:8765/api/auth/login",
+                    "https://taskmager2-00.vercel.app/api/auth/login",
                     { username, password },
                     { withCredentials: true }   
                 );
