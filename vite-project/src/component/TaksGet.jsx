@@ -15,7 +15,7 @@ const Handlesubmit= async(e)=>
         
         if(tittle&&description)
         {
-        const sendtask=await axios.post("http://localhost:8765/task",
+        const sendtask=await axios.post("https://taskmager2-00.vercel.app/task",
             {
                 tittle,
                 description,
