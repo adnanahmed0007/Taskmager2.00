@@ -6,7 +6,7 @@ const Datashow = () => {
 
     const Delteit = async (id) => {
         console.log("deleting... id: ", id);
-        const datadelete1 = await axios.post(`http://localhost:8765/task/delete${id}`, {}, {
+        const datadelete1 = await axios.post(`https://taskmager2-00.vercel.app/task/delete${id}`, {}, {
             withCredentials: true,
         });
         if (datadelete1.data.message) {
