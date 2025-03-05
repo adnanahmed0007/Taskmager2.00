@@ -9,12 +9,16 @@ import cookieParser from 'cookie-parser';
 import cors from "cors";
  
  
-app.use(cors({
-    origin: ["http://localhost:5173"],   
-    credentials: true,  
-    methods: ["GET", "POST", "PUT", "DELETE"],   
-    allowedHeaders: ["Content-Type", "Authorization"]
+ app.use(cors({
+  origin: [
+    "http://localhost:5173", // for local development
+    "https://taskmager2-00-xko9.vercel.app" // your Vercel deployment URL
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
  
 app.use(express.json());
 app.use(cookieParser());
